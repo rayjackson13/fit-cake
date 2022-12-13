@@ -1,14 +1,15 @@
-import React from 'react';
 import clsx from 'clsx';
+import React from 'react';
+
 import * as styles from './Button.module.sass';
 
 type Props = {
-  href?: string;
-  outline?: boolean;
-  fullWidth?: boolean;
-  customStyles?: string;
   children: React.ReactNode;
+  customStyles?: string;
+  fullWidth?: boolean;
+  href?: string;
   onClick?: () => unknown;
+  outline?: boolean;
 };
 
 export const Button = (props: Props): JSX.Element => {
@@ -18,7 +19,7 @@ export const Button = (props: Props): JSX.Element => {
     outline = false,
     fullWidth = false,
     children,
-    onClick = () => {},
+    onClick = (): void => {},
   } = props;
   const rootStyle = clsx(
     styles.button,
@@ -27,16 +28,15 @@ export const Button = (props: Props): JSX.Element => {
     fullWidth && styles.fullWidth
   );
 
-  if (href) {
+  if (href)
     return (
-      <a className={rootStyle} onClick={onClick} href={href} target="_blank" rel="noreferrer">
+      <a className={rootStyle} href={href} onClick={onClick} rel="noreferrer" target="_blank">
         {children}
       </a>
     );
-  }
 
   return (
-    <button className={rootStyle} onClick={onClick}>
+    <button className={rootStyle} onClick={onClick} type="button">
       {children}
     </button>
   );

@@ -1,12 +1,14 @@
-import React, { useRef } from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
-import { Hero } from 'components/Hero';
+import React, { useRef } from 'react';
+
 import { Catalogue } from 'components/Catalogue';
+import { Header } from 'components/Header';
+import { Hero } from 'components/Hero';
 
 const IndexPage: React.FC<PageProps> = () => {
   const catalogueRef = useRef<HTMLDivElement>(null);
 
-  const scrollToCatalogue = () => {
+  const scrollToCatalogue = (): void => {
     const catalogue = catalogueRef.current;
     if (!catalogue) return;
 
@@ -18,6 +20,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <main>
+      <Header />
       <Hero {...{ scrollToCatalogue }} />
       <div ref={catalogueRef}>
         <Catalogue category="popular" title="Популярные десерты" />

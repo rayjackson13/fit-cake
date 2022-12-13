@@ -1,26 +1,8 @@
 @import '../../styles/colors'
 @import '../../styles/functions'
 
-.header
+.root
   background-color: $hero
-
-.nav
-  padding: 20px 0
-  display: flex
-  justify-content: space-between
-  align-items: center
-
-  @include screen(sm)
-    padding-top: 0
-    padding-bottom: 0
-    height: 140px
-
-.logo
-  width: 150px
-  object-fit: contain
-
-  @include screen(sm)
-    width: 225px
 
 .body
   padding: 44px 0 80px
@@ -89,10 +71,3 @@
   @include screen(lg)
     width: 517px
     height: 514px
-
-.whatsapp
-  width: 48px
-  height: 48px
-
-  &:hover
-    opacity: 0.5

@@ -1,13 +1,15 @@
-import { Button } from 'components/Button';
 import React from 'react';
+
 import * as styles from './Catalogue.module.sass';
 
+import { Button } from 'components/Button';
+
 type Props = {
+  description: string;
+  image: string;
+  price: number;
   title: string;
   type: string;
-  description: string;
-  price: number;
-  image: string;
 };
 
 const formatter = new Intl.NumberFormat('ru-RU', {
@@ -22,13 +24,13 @@ export const CatalogueItem = ({ title, type, description, price, image }: Props)
 
   return (
     <div className={styles.item}>
-      <img src={image} alt="" />
+      <img alt="" src={image} />
       <div className={styles.itemBody}>
         <h3>“{title}”</h3>
         <p className={styles.itemDesc}>{description}</p>
         <p className={styles.itemPrice}>{formatter.format(price)}</p>
       </div>
-      <Button href={link} fullWidth customStyles={styles.order}>
+      <Button customStyles={styles.order} fullWidth href={link}>
         Заказать
       </Button>
     </div>
