@@ -7,7 +7,11 @@ import * as styles from './Hero.module.sass';
 
 const link = encodeURI('https://wa.me/79026774977?text=Здравствуйте! Хочу оформить заказ');
 
-export const Hero = (): JSX.Element => (
+type Props = {
+  scrollToCatalogue: () => void;
+};
+
+export const Hero = ({ scrollToCatalogue }: Props): JSX.Element => (
   <header className={styles.header}>
     <div className="container">
       <div className={styles.nav}>
@@ -33,7 +37,7 @@ export const Hero = (): JSX.Element => (
             торты и десерты
           </h1>
           <p>на заказ в Казани</p>
-          <Button>Посмотреть каталог</Button>
+          <Button onClick={scrollToCatalogue}>Посмотреть каталог</Button>
         </div>
 
         <img className={styles.image} src={CakeImage} alt="" />
