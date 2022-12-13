@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import React, { useEffect } from 'react';
+import React from 'react';
 import * as styles from './Catalogue.module.sass';
 import { CatalogueItem } from './Item';
 
@@ -10,6 +10,7 @@ type Props = {
 
 type Product = {
   title: string;
+  type: string;
   description: string;
   price: number;
   keywords: string[];
@@ -28,6 +29,7 @@ export const Catalogue = ({ category, title }: Props): JSX.Element => {
       data: allProductsYaml {
         nodes {
           title
+          type
           description
           price
           keywords
@@ -49,6 +51,7 @@ export const Catalogue = ({ category, title }: Props): JSX.Element => {
           {items.map((item: Product) => (
             <CatalogueItem
               title={item.title}
+              type={item.type}
               description={item.description}
               price={item.price}
               image={item.image.publicURL}
