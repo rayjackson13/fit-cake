@@ -9,12 +9,18 @@ type Props = {
   image: string;
 };
 
+const formatter = new Intl.NumberFormat('ru-RU', {
+  style: 'currency',
+  currency: 'RUB',
+  maximumFractionDigits: 0,
+});
+
 export const CatalogueItem = ({ title, description, price, image }: Props): JSX.Element => (
   <div className={styles.item}>
     <img src={image} alt="" />
-    <h3>{title}</h3>
+    <h3>“{title}”</h3>
     <p>{description}</p>
-    <p className={styles.itemPrice}>{price} ₽</p>
+    <p className={styles.itemPrice}>{formatter.format(price)}</p>
     <Button outline fullWidth>
       Заказать
     </Button>
