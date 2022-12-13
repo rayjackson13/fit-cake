@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^2.1.5",
+    "clsx": "^1.2.1",
     "gatsby": "^5.2.0",
     "gatsby-plugin-google-analytics": "^5.2.0",
     "gatsby-plugin-google-fonts": "^1.0.1",

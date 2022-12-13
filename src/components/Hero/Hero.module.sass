@@ -5,7 +5,7 @@
   background-color: $hero
 
 .nav
-  padding: 20px 20px
+  padding: 20px 0
   display: flex
   justify-content: space-between
   align-items: center
@@ -13,17 +13,7 @@
   @include screen(sm)
     padding-top: 0
     padding-bottom: 0
-    padding-left: 40px
-    padding-right: 40px
     height: 140px
-
-  @include screen(md)
-    padding-left: 100px
-    padding-right: 100px
-
-  @include screen(xl)
-    padding-left: 200px
-    padding-right: 200px
 
 .logo
   width: 100px
@@ -33,23 +23,13 @@
     width: 225px
 
 .body
-  padding: 24px 20px 60px
+  padding: 24px 0 60px
   display: flex
   justify-content: space-between
 
   @include screen(sm)
     padding-top: 78px
     padding-bottom: 120px
-    padding-left: 40px
-    padding-right: 40px
-
-  @include screen(md)
-    padding-left: 100px
-    padding-right: 100px
-
-  @include screen(xl)
-    padding-left: 200px
-    padding-right: 200px
 
 .content
   display: flex

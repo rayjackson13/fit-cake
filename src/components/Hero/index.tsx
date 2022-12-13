@@ -6,25 +6,27 @@ import * as styles from './Hero.module.sass';
 
 export const Hero = (): JSX.Element => (
   <header className={styles.header}>
-    <div className={styles.nav}>
-      <img className={styles.logo} src={LogoImage} alt="Fit Cake Logo" />
-      <Button>
-        <span className={styles.xsHidden}>Написать в </span>WhatsApp
-      </Button>
-    </div>
-
-    <div className={styles.body}>
-      <div className={styles.content}>
-        <h1>
-          ПП и веган
-          <br />
-          торты и десерты
-        </h1>
-        <p>на заказ в Казани</p>
-        <Button>Посмотреть каталог</Button>
+    <div className="container">
+      <div className={styles.nav}>
+        <img className={styles.logo} src={LogoImage} alt="Fit Cake Logo" />
+        <Button>
+          <span className={styles.xsHidden}>Написать в </span>WhatsApp
+        </Button>
       </div>
 
-      <img className={styles.image} src={CakeImage} alt="" />
+      <div className={styles.body}>
+        <div className={styles.content}>
+          <h1>
+            ПП и веган
+            <br />
+            торты и десерты
+          </h1>
+          <p>на заказ в Казани</p>
+          <Button>Посмотреть каталог</Button>
+        </div>
+
+        <img className={styles.image} src={CakeImage} alt="" />
+      </div>
     </div>
   </header>
 );
