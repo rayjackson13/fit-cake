@@ -50,6 +50,14 @@ const config: GatsbyConfig = {
     },
     'gatsby-transformer-remark',
     'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /src\/images\/svg/, // See below to configure properly
+        },
+      },
+    },
   ],
 };
 

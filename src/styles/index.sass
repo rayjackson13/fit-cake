@@ -32,3 +32,15 @@ button
   @include screen(xl)
     padding-left: 200px
     padding-right: 200px
+
+.mobile-hidden
+  display: none
+
+  @include screen(sm)
+    display: inherit
+
+.desktop-hidden
+  @include screen(sm)
+    display: none
+  
+  

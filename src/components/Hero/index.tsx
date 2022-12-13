@@ -1,6 +1,7 @@
 import React from 'react';
-import LogoImage from 'images/logo.svg';
+import Logo from 'images/svg/logo.svg';
 import CakeImage from 'images/cake.jpg';
+import Whatsapp from 'images/svg/whatsapp.svg';
 import { Button } from 'components/Button';
 import * as styles from './Hero.module.sass';
 
@@ -10,10 +11,18 @@ export const Hero = (): JSX.Element => (
   <header className={styles.header}>
     <div className="container">
       <div className={styles.nav}>
-        <img className={styles.logo} src={LogoImage} alt="Fit Cake Logo" />
-        <Button href={link}>
-          <span className={styles.xsHidden}>Написать в </span>WhatsApp
+        <Logo className={styles.logo} />
+        <Button href={link} customStyles="mobile-hidden">
+          Написать в WhatsApp
         </Button>
+        <a
+          href={link}
+          target="_blank"
+          className={`desktop-hidden ${styles.whatsapp}`}
+          rel="noreferrer"
+        >
+          <Whatsapp />
+        </a>
       </div>
 
       <div className={styles.body}>
