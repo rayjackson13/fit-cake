@@ -36,11 +36,20 @@ const config: GatsbyConfig = {
         short_name: 'Fit Cake',
         start_url: '/',
         background_color: '#fff',
-        theme_color: '#F47C87',
+        theme_color: '#f1f5e2',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: 'src/data/products',
+        name: 'products',
+      },
+    },
+    'gatsby-transformer-remark',
+    'gatsby-transformer-yaml',
   ],
 };
 

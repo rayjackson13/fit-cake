@@ -4,17 +4,17 @@ import * as styles from './Catalogue.module.sass';
 
 type Props = {
   title: string;
-  category: string;
+  description: string;
   price: number;
   image: string;
 };
 
-export const CatalogueItem = (): JSX.Element => (
+export const CatalogueItem = ({ title, description, price, image }: Props): JSX.Element => (
   <div className={styles.item}>
-    <img alt="" />
-    <h3>“Клубника-Черника”</h3>
-    <p>Кешью-кейк</p>
-    <p className={styles.itemPrice}>2500 ₽</p>
+    <img src={image} alt="" />
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <p className={styles.itemPrice}>{price} ₽</p>
     <Button outline fullWidth>
       Заказать
     </Button>

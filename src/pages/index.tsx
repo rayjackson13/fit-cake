@@ -7,7 +7,10 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
       <Hero />
-      <Catalogue />
+      <div>
+        <Catalogue category="popular" title="Популярные десерты" />
+        <Catalogue category="cashew cake" title="Кешью-кейки" />
+      </div>
     </main>
   );
 };
