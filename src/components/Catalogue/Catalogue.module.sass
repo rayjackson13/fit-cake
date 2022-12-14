@@ -8,8 +8,6 @@
   @include screen(sm)
     padding-top: 140px
     padding-bottom: 140px
-  
-  
 
   &:not(:last-child)
     padding-bottom: 0
@@ -43,8 +41,9 @@
     grid-template-columns: repeat(4, 1fr)
 
 .item
+  $shadow-position: 0px 2px 16px
   background: $white
-  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.08)
+  box-shadow: $shadow-position rgba(0, 0, 0, 0.08)
   border-radius: 8px
   color: $text
   letter-spacing: 0.02em
@@ -52,8 +51,12 @@
   flex-direction: column
   overflow: hidden
 
+  &:hover
+    box-shadow: $shadow-position rgba(0, 0, 0, 0.18)
+    opacity: 0.7
+
   img
-    background-color: gray
+    background-color: white
     width: 100%
     aspect-ratio: 1.3030303
     margin-bottom: 12px
@@ -98,5 +101,8 @@
     @include screen(sm)
       font-size: 24px
   
-button.order, a.order
-  border-radius: 0
+  button.order, a.order
+    border-radius: 0
+
+    &:hover
+      opacity: 1

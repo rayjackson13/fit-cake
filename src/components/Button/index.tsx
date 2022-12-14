@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { Link } from 'gatsby';
 import React from 'react';
 
 import * as styles from './Button.module.sass';
@@ -28,12 +29,13 @@ export const Button = (props: Props): JSX.Element => {
     fullWidth && styles.fullWidth
   );
 
-  if (href)
+  if (href) {
     return (
-      <a className={rootStyle} href={href} onClick={onClick} rel="noreferrer" target="_blank">
+      <Link className={rootStyle} to={href} onClick={onClick} rel="noreferrer" target="_blank">
         {children}
-      </a>
+      </Link>
     );
+  }
 
   return (
     <button className={rootStyle} onClick={onClick} type="button">

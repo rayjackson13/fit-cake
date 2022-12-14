@@ -6,12 +6,20 @@ body
   margin: 0
   min-width: 400px
   font-family: 'Montserrat', sans-serif
+  user-select: none
 
 *
-  transition: all .25s
+  transition: all .35s
 
 button
   font-family: inherit
+
+a
+  text-decoration: none
+  color: inherit
+
+  &:visited
+    color: inherit
 
 *, *::before, *::after
   box-sizing: border-box
@@ -34,13 +42,13 @@ button
     padding-right: 200px
 
 .mobile-hidden
-  display: none
+  display: none !important
 
   @include screen(sm)
-    display: inherit
+    display: inherit !important
 
 .desktop-hidden
   @include screen(sm)
-    display: none
+    display: none !important
   
   

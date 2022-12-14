@@ -1,12 +1,17 @@
 @import '../../styles/colors'
 @import '../../styles/functions'
 
+a.button
+  display: inline-block
+
+  &:visited
+    color: $white
+
 .button
   padding: 12px 22px
   background-color: $accent
   border-radius: 32px
   border: 2px solid $accent
-  transition: all .25s
   font-size: 16px
   line-height: 1
   font-family: 'Monserrat', sans-serif
@@ -16,6 +21,7 @@
   letter-spacing: 0.02em
   text-decoration: none
   text-align: center
+  width: auto
 
   @include screen(sm)
     padding: 20px 42px
