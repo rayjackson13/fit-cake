@@ -63,9 +63,10 @@
   border-radius: 80px
   overflow: hidden
   flex-shrink: 0
+  isolation: isolate
 
   @include screen(md)
-    display: block
+    display: block !important
 
   @include screen(lg)
     width: 517px
