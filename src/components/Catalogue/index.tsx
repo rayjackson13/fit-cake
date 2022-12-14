@@ -38,7 +38,7 @@ const sortProducts = (nodes: Product[]): Product[] => {
     }
 
     // Otherwise sort by price.
-    return b.price - a.price;
+    return a.price - b.price;
   });
 };
 
