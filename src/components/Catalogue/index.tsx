@@ -27,10 +27,28 @@ const getProductsFromQuery = (nodes: ProductFile[]): Product[] => {
 const filterProducts = (nodes: Product[], category: string): Product[] =>
   nodes.filter(({ keywords }) => keywords.includes(category));
 
+const sortProducts = (nodes: Product[]): Product[] => {
+  return nodes.sort((a, b): number => {
+    // If item has the keyword, it will be higher in the list.
+    if (a.keywords.includes('popular') && !b.keywords.includes('popular')) {
+      return -1;
+    }
+    if (!a.keywords.includes('popular') && b.keywords.includes('popular')) {
+      return 1;
+    }
+
+    // Otherwise sort by price.
+    return b.price - a.price;
+  });
+};
+
 export const Catalogue = ({ category, excludeId, title, maxItems }: Props) => {
   const { data } = useStaticQuery(graphql`
     query CatalogueData {
-      data: allFile(filter: { sourceInstanceName: { eq: "products" }, extension: { eq: "md" } }) {
+      data: allFile(
+        filter: { sourceInstanceName: { eq: "products" }, extension: { eq: "md" } }
+        sort: { childMarkdownRemark: { frontmatter: { title: ASC } } }
+      ) {
         nodes {
           name
           childMarkdownRemark {
@@ -61,7 +79,8 @@ export const Catalogue = ({ category, excludeId, title, maxItems }: Props) => {
   // Filter products by category.
   const filtered = filterProducts(excluded, category);
   // Limit the amount of items displayed.
-  const items = filtered.slice(0, maxItems);
+  const sorted = sortProducts(filtered);
+  const items = sorted.slice(0, maxItems);
 
   if (!items.length) {
     return null;

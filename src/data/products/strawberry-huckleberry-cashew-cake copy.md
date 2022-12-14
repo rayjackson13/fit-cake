@@ -2,7 +2,7 @@
 title: Клубника-Черника 2 3
 type: Кешью-кейк
 description: Сочный бисквит в сочетании с кокосовой карамелью, жареным арахисом и творожно-ореховым кремом
-price: 2500
+price: 25000
 keywords: [cashew cake, popular]
 image: ./images/taylor-kiser-mepQiXCXETM-unsplash.jpg
 ---

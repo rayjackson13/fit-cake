@@ -6,7 +6,10 @@ const productPageTemplate = path.resolve(__dirname, './src/templates/ProductPage
 
 const graphqlQuery = `
 {
-  allFile (filter: { sourceInstanceName: { eq: "products" }, extension: { eq: "md" } }) {
+  allFile (
+    filter: { sourceInstanceName: { eq: "products" }, extension: { eq: "md" } }
+    sort: { childMarkdownRemark: { frontmatter: { title: ASC } } }
+  ) {
     nodes {
       name
       childMarkdownRemark {
