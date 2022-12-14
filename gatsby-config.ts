@@ -58,6 +58,17 @@ const config: GatsbyConfig = {
         },
       },
     },
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        // Defaults used for gatsbyImageData and StaticImage
+        defaults: {},
+        // Relates to "options.failOn" in https://sharp.pixelplumbing.com/api-constructor#parameters
+        failOn: `warning`,
+      },
+    },
+    'gatsby-transformer-sharp',
   ],
 };
 

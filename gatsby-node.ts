@@ -18,6 +18,9 @@ const graphqlQuery = `
           keywords
           image {
             publicURL
+            childImageSharp {
+              gatsbyImageData
+            }
           }
         }
         html

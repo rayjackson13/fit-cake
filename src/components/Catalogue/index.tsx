@@ -42,6 +42,9 @@ export const Catalogue = ({ category, excludeId, title, maxItems }: Props) => {
               keywords
               image {
                 publicURL
+                childImageSharp {
+                  gatsbyImageData
+                }
               }
             }
             id
@@ -72,7 +75,7 @@ export const Catalogue = ({ category, excludeId, title, maxItems }: Props) => {
           {items.map((item, idx) => (
             <CatalogueItem
               description={item.description}
-              image={item.image.publicURL}
+              image={item.image}
               key={idx}
               price={item.price}
               slug={item.slug}

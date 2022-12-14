@@ -1,9 +1,9 @@
+import { ImageDataLike } from 'gatsby-plugin-image';
+
 export type Product = {
   description: string;
   id: string;
-  image: {
-    publicURL: string;
-  };
+  image: Image;
   keywords: string[];
   price: number;
   slug: string;
@@ -26,3 +26,5 @@ export type ProductQueryResult = {
     nodes: ProductFile[];
   };
 };
+
+export type Image = ImageDataLike;

@@ -5,10 +5,12 @@ import * as styles from './Catalogue.module.sass';
 import { Button } from 'components/Button';
 import { Link } from 'gatsby';
 import { formatPrice } from 'helpers/formatPrice';
+import { Image } from 'typed';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 type Props = {
   description: string;
-  image: string;
+  image: Image;
   price: number;
   slug: string;
   title: string;
@@ -17,8 +19,8 @@ type Props = {
 
 export const CatalogueItem = ({
   title,
-  slug,
   type,
+  slug,
   description,
   price,
   image,
@@ -26,10 +28,12 @@ export const CatalogueItem = ({
   if (!slug) {
     return null;
   }
-
+  const picture = getImage(image);
   return (
     <Link className={styles.item} to={slug}>
-      <div className={styles.image} style={{ backgroundImage: `url(${image})` }} />
+      {picture && (
+        <GatsbyImage image={picture} className={styles.image} alt={`${type} “${title}”`} />
+      )}
       <div className={styles.itemBody}>
         <h3>“{title}”</h3>
         <p className={styles.itemDesc}>{description}</p>

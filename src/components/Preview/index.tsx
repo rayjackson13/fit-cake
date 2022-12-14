@@ -1,4 +1,5 @@
 import { Button } from 'components/Button';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { formatPrice } from 'helpers/formatPrice';
 import React from 'react';
 import { Product } from 'typed';
@@ -12,13 +13,16 @@ export const Preview = ({ product }: Props): JSX.Element => {
   const { title, type, image, html, price } = product;
   const text = `Здравствуйте! Хочу заказать ${type.toLowerCase()} “${title}”`;
   const link = encodeURI(`https://wa.me/79026774977?text=${text}`);
+  const picture = getImage(image);
 
   return (
     <section className={styles.section}>
       <div className="container">
         <div className={styles.grid}>
           {/* <img className={styles.image} src={image.publicURL} alt="" /> */}
-          <div className={styles.image} style={{ backgroundImage: `url(${image.publicURL})` }} />
+          {picture && (
+            <GatsbyImage image={picture} className={styles.image} alt={`${type} “${title}”`} />
+          )}
 
           <div className={styles.content}>
             <h1 className={styles.title}>“{title}”</h1>
