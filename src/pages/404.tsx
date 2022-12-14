@@ -1,31 +1,28 @@
-import { Link, HeadFC, PageProps } from 'gatsby';
+import { HeadFC, PageProps } from 'gatsby';
 import * as React from 'react';
 
 import { Header } from 'components/Header';
+import { Button } from 'components/Button';
 
-const headingStyles = {
+const headingStyles: React.CSSProperties = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
-};
-
-const paragraphStyles = {
-  marginBottom: 48,
+  textAlign: 'center',
 };
 
 const NotFoundPage: React.FC<PageProps> = () => (
   <main>
     <Header />
 
-    <h2 style={headingStyles}>Страница не найдена</h2>
-    <p style={paragraphStyles}>
-      Страница не найдена
-      <br />
-      <Link to="/">На главную</Link>.
-    </p>
+    <div className="page404-block">
+      <div className="container">
+        <h2 style={headingStyles}>Страница не найдена</h2>
+        <Button href="/">На главную</Button>
+      </div>
+    </div>
   </main>
 );
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => <title>Not found</title>;
+export const Head: HeadFC = () => <title>Страница не найдена | Fit Cake</title>;
