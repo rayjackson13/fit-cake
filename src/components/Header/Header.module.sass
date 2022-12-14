@@ -20,14 +20,34 @@
 
 .logo
   width: 150px
-  object-fit: contain
 
   @include screen(sm)
     width: 225px
+
+.logoImage
+  width: 100%
 
 .whatsapp
   width: 48px
   height: 48px
 
   &:hover
+    opacity: 0.5
+
+.chevron
+  width: 8px
+  height: 32px
+
+.logoLink
+  background: 0
+  border: 0
+  cursor: pointer
+  padding: 4px 0
+  margin: 0
+  display: grid
+  grid-template-columns: repeat(2, auto)
+  gap: 16px
+  align-items: center
+
+  &:hover:not(:disabled)
     opacity: 0.5

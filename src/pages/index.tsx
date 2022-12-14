@@ -20,7 +20,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
   return (
     <main>
-      <Header />
+      <Header isHomePage />
       <Hero {...{ scrollToCatalogue }} />
       <div ref={catalogueRef}>
         <Catalogue category="popular" title="Популярные десерты" />

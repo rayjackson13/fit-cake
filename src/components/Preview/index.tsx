@@ -17,7 +17,8 @@ export const Preview = ({ product }: Props): JSX.Element => {
     <section className={styles.section}>
       <div className="container">
         <div className={styles.grid}>
-          <img className={styles.image} src={image.publicURL} alt="" />
+          {/* <img className={styles.image} src={image.publicURL} alt="" /> */}
+          <div className={styles.image} style={{ backgroundImage: `url(${image.publicURL})` }} />
 
           <div className={styles.content}>
             <h1 className={styles.title}>“{title}”</h1>

@@ -29,7 +29,7 @@ export const CatalogueItem = ({
 
   return (
     <Link className={styles.item} to={slug}>
-      <img alt="" src={image} />
+      <div className={styles.image} style={{ backgroundImage: `url(${image})` }} />
       <div className={styles.itemBody}>
         <h3>“{title}”</h3>
         <p className={styles.itemDesc}>{description}</p>
