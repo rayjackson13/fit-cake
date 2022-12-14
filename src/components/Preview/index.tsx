@@ -20,7 +20,7 @@ export const Preview = ({ product }: Props): JSX.Element => {
           <img className={styles.image} src={image.publicURL} alt="" />
 
           <div className={styles.content}>
-            <h1 className={styles.title}>{title}</h1>
+            <h1 className={styles.title}>“{title}”</h1>
             <p className={styles.type}>{type}</p>
             <p className={styles.price}>{formatPrice(price)}</p>
             <div className={styles.info} dangerouslySetInnerHTML={{ __html: html }} />

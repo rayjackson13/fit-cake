@@ -32,4 +32,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Fit Cake | Главная</title>;
+export const Head: HeadFC = () => <title>Главная | Fit Cake</title>;

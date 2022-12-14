@@ -1,4 +1,4 @@
-import { PageProps } from 'gatsby';
+import { HeadFC, PageProps } from 'gatsby';
 import React from 'react';
 import { Catalogue } from 'components/Catalogue';
 import { Header } from 'components/Header';
@@ -20,3 +20,12 @@ const ProductPageTemplate = ({ pageContext }: PageProps) => {
 };
 
 export default ProductPageTemplate;
+
+export const Head: HeadFC = ({ pageContext }) => {
+  const { product } = pageContext as { product: Product };
+  return (
+    <title>
+      {product.type} “{product.title}” | Fit Cake
+    </title>
+  );
+};
