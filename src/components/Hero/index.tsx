@@ -23,7 +23,15 @@ export const Hero = ({ scrollToCatalogue }: Props): JSX.Element => (
           <Button onClick={scrollToCatalogue}>Посмотреть каталог</Button>
         </div>
 
-        <StaticImage src="../../images/cake.jpg" alt="Fit Cake" className={styles.image} />
+        <StaticImage
+          src="../../images/cake.jpg"
+          alt="Fit Cake"
+          className={styles.image}
+          width={517}
+          height={514}
+          placeholder="none"
+          loading="eager"
+        />
       </div>
     </div>
   </div>
