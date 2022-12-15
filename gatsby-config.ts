@@ -29,8 +29,16 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['Montserrat:400,500', 'Tenor+Sans:400'],
-        display: 'swap',
+        fonts: [
+          {
+            family: 'Montserrat',
+            weights: ['400', '500'],
+          },
+          {
+            family: 'Tenor Sans',
+            weights: ['400'],
+          },
+        ],
       },
     },
     {
