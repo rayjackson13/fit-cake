@@ -22,7 +22,7 @@ const graphqlQuery = `
           image {
             publicURL
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(width: 800)
             }
           }
         }

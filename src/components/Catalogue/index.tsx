@@ -61,7 +61,7 @@ export const Catalogue = ({ category, excludeId, title, maxItems }: Props) => {
               image {
                 publicURL
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(width: 580)
                 }
               }
             }
