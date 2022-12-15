@@ -27,7 +27,7 @@ const config: GatsbyConfig = {
       __key: 'pages',
     },
     {
-      resolve: 'gatsby-plugin-google-fonts',
+      resolve: 'gatsby-plugin-google-fonts-v2',
       options: {
         fonts: [
           {
