@@ -29,7 +29,12 @@ export const Header = ({ isHomePage = false, shadow = false }: Props): JSX.Eleme
     <header className={rootStyle}>
       <div className="container">
         <div className={styles.nav}>
-          <button disabled={isHomePage} onClick={onBackPressed} className={styles.logoLink}>
+          <button
+            aria-label="Перейти на главную"
+            disabled={isHomePage}
+            onClick={onBackPressed}
+            className={styles.logoLink}
+          >
             {!isHomePage && <Chevron className={styles.chevron} />}
             <Logo className={styles.logo} />
           </button>

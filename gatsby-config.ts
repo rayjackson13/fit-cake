@@ -81,6 +81,12 @@ const config: GatsbyConfig = {
       },
     },
     'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'ru',
+      },
+    },
   ],
 };
 
