@@ -30,6 +30,7 @@ export const Head: HeadFC = ({ pageContext, ...props }) => {
   return (
     <>
       <title>{pageTitle}</title>
+      <meta name="description" content={product.description} />
       <meta name="og:title" content={pageTitle} />
       <meta name="og:description" content={product.description} />
       <meta name="og:image" content={imageURL} />

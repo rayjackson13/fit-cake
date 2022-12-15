@@ -39,6 +39,7 @@ export const Head: HeadFC = ({ pageContext, ...props }) => {
   return (
     <>
       <title>{pageTitle}</title>
+      <meta name="description" content="ПП и веган десерты на заказ в Казани" />
       <meta name="og:title" content={pageTitle} />
       <meta name="og:description" content="ПП и веган десерты на заказ в Казани" />
       <meta name="og:image" content={ProfileImage} />
