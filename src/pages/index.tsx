@@ -5,6 +5,8 @@ import { Catalogue } from 'components/Catalogue';
 import { Header } from 'components/Header';
 import { Hero } from 'components/Hero';
 
+import ProfileImage from 'images/profile.jpg';
+
 const IndexPage: React.FC<PageProps> = () => {
   const catalogueRef = useRef<HTMLDivElement>(null);
 
@@ -32,4 +34,16 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Главная | Fit Cake</title>;
+export const Head: HeadFC = ({ pageContext, ...props }) => {
+  const pageTitle = 'Главная | Fit Cake';
+  return (
+    <>
+      <title>{pageTitle}</title>
+      <meta name="og:title" content={pageTitle} />
+      <meta name="og:description" content="ПП и веган десерты на заказ в Казани" />
+      <meta name="og:image" content={ProfileImage} />
+      <meta name="og:type" content="website" />
+      <meta name="og:url" content={`${process.env.GATSBY_PUBLIC_URL}/`} />
+    </>
+  );
+};

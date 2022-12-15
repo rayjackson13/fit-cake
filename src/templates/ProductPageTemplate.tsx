@@ -21,11 +21,20 @@ const ProductPageTemplate = ({ pageContext }: PageProps) => {
 
 export default ProductPageTemplate;
 
-export const Head: HeadFC = ({ pageContext }) => {
+export const Head: HeadFC = ({ pageContext, ...props }) => {
   const { product } = pageContext as { product: Product };
+  const pageTitle = `${product.type} “${product.title}” | Fit Cake`;
+  const { publicURL } = product.image as { publicURL: '' };
+  const imageURL = `${process.env.GATSBY_PUBLIC_URL}${publicURL}`;
+
   return (
-    <title>
-      {product.type} “{product.title}” | Fit Cake
-    </title>
+    <>
+      <title>{pageTitle}</title>
+      <meta name="og:title" content={pageTitle} />
+      <meta name="og:description" content={product.description} />
+      <meta name="og:image" content={imageURL} />
+      <meta name="og:type" content="website" />
+      <meta name="og:url" content={`${process.env.GATSBY_PUBLIC_URL}/`} />
+    </>
   );
 };

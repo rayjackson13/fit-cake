@@ -23,7 +23,6 @@ export const Hero = ({ scrollToCatalogue }: Props): JSX.Element => (
           <Button onClick={scrollToCatalogue}>Посмотреть каталог</Button>
         </div>
 
-        {/* <div className={styles.image} style={{ backgroundImage: `url(${CakeImage})` }} /> */}
         <StaticImage src="../../images/cake.jpg" alt="Fit Cake" className={styles.image} />
       </div>
     </div>
