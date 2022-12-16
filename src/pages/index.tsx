@@ -37,6 +37,7 @@ const IndexPage: React.FC<PageProps> = () => {
           subtitle="Маленький тортик-открытка весом 450г на 2-3 человек, состоит из двух слоев бисквита, начинки и крема, надпись и несложный рисунок входят в стоимость"
         />
         <Catalogue category="sweet roll" title="Рулеты" />
+        <Catalogue category="mini dessert" title="Мини-десерты" />
         <Catalogue category="cashew cake" title="Кешью-кейки" />
       </div>
     </main>
