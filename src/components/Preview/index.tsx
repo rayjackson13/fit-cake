@@ -31,7 +31,7 @@ export const Preview = ({ product }: Props): JSX.Element => {
             <Button href={link} customStyles={styles.order}>
               Заказать
             </Button>
-            <p className={styles.description}>{description}</p>
+            {!!description && <p className={styles.description}>{description}</p>}
             <div className={styles.info} dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
