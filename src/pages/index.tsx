@@ -38,6 +38,7 @@ const IndexPage: React.FC<PageProps> = () => {
         />
         <Catalogue category="sweet roll" title="Рулеты" />
         <Catalogue category="mini dessert" title="Мини-десерты" />
+        <Catalogue category="trifle" title="Трайфлы" />
         <Catalogue category="cashew cake" title="Кешью-кейки" />
       </div>
     </main>
