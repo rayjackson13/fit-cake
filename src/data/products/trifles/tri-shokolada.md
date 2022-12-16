@@ -4,7 +4,7 @@ type: Трайфл
 description: 
 price: 350
 keywords: [trifle]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/trifle-zebra.jpg
 ---
 Состав: яйца, подсластитель фитпарад 7, какао-порошок, рисовая мука, миндальная мука, разрыхлитель, кокосовое масло, кокосовое молоко, желатин, молоко 2,5%, сливки 33%, белый молочный и темный шоколад без сахара
 

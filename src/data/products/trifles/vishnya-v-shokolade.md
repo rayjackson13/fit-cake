@@ -4,7 +4,7 @@ type: Трайфл
 description: 
 price: 350
 keywords: [trifle]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/trifle-vishnya-v-shokolade.jpg
 ---
 Состав: яйца, рисовая мука, миндальная мука, разрыхлитель, какао-порошок, молоко кокосовое, масло кокосовое, подсластитель Фитпарад 7, мягкий творог, творожный сыр, молочный шоколад б/сахара, вишня, кукурузный крахмал, сливки 33%
 

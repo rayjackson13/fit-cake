@@ -4,7 +4,7 @@ type: Трайфл
 description: 
 price: 350
 keywords: [trifle]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/trifle-klubnika-so-slivkami.jpg
 ---
 Состав: творожный сыр, мягкий творог, клубника замороженная, сливки 33%, яйца, рисовая мука, молоко, кокосовое масло, подсластитель, сироп топинамбура, кукурузный крахмал, разрыхлитель
 
