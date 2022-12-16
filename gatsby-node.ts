@@ -11,6 +11,7 @@ const graphqlQuery = `
     sort: { childMarkdownRemark: { frontmatter: { title: ASC } } }
   ) {
     nodes {
+      relativeDirectory
       name
       childMarkdownRemark {
         frontmatter {
@@ -45,13 +46,13 @@ const createPages: GatsbyNode['createPages'] = async ({ reporter, graphql, actio
   }
 
   const { nodes } = result.data.allFile;
-  nodes.forEach(({ name, childMarkdownRemark }) => {
+  nodes.forEach(({ name, relativeDirectory, childMarkdownRemark }) => {
     const { frontmatter, html, id } = childMarkdownRemark;
     const product: Product = {
       ...frontmatter,
       html,
       id,
-      slug: `/products/${name}`,
+      slug: `/products/${relativeDirectory}/${name}`,
     };
 
     createPage({

@@ -8,16 +8,17 @@ import { CatalogueItem } from './Item';
 type Props = {
   category: string;
   title: string;
+  subtitle?: string;
   maxItems?: number;
   excludeId?: string;
 };
 
 const getProductsFromQuery = (nodes: ProductFile[]): Product[] => {
-  return nodes.map(({ name, childMarkdownRemark }) => {
+  return nodes.map(({ name, relativeDirectory, childMarkdownRemark }) => {
     const { frontmatter, html, id } = childMarkdownRemark;
     return {
       ...frontmatter,
-      slug: `/products/${name}`,
+      slug: `/products/${relativeDirectory}/${name}`,
       html,
       id,
     };
@@ -42,7 +43,7 @@ const sortProducts = (nodes: Product[]): Product[] => {
   });
 };
 
-export const Catalogue = ({ category, excludeId, title, maxItems }: Props) => {
+export const Catalogue = ({ category, excludeId, title, subtitle, maxItems }: Props) => {
   const { data } = useStaticQuery(graphql`
     query CatalogueData {
       data: allFile(
@@ -50,6 +51,7 @@ export const Catalogue = ({ category, excludeId, title, maxItems }: Props) => {
         sort: { childMarkdownRemark: { frontmatter: { title: ASC } } }
       ) {
         nodes {
+          relativeDirectory
           name
           childMarkdownRemark {
             frontmatter {
@@ -89,7 +91,10 @@ export const Catalogue = ({ category, excludeId, title, maxItems }: Props) => {
   return (
     <section className={styles.section}>
       <div className="container">
-        <h2 className={styles.title}>{title}</h2>
+        <div className={styles.titleBlock}>
+          <h2 className={styles.title}>{title}</h2>
+          {!!subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+        </div>
         <div className={styles.grid}>
           {items.map((item, idx) => (
             <CatalogueItem

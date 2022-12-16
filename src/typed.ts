@@ -14,6 +14,7 @@ export type Product = {
 
 export type ProductFile = {
   name: string;
+  relativeDirectory: string;
   childMarkdownRemark: {
     frontmatter: Omit<Product, 'html'>;
     html: string;

@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const Preview = ({ product }: Props): JSX.Element => {
-  const { title, type, image, html, price } = product;
+  const { description, title, type, image, html, price } = product;
   const text = `Здравствуйте! Хочу заказать ${type.toLowerCase()} “${title}”`;
   const link = encodeURI(`https://wa.me/79026774977?text=${text}`);
   const picture = getImage(image);
@@ -28,10 +28,11 @@ export const Preview = ({ product }: Props): JSX.Element => {
             <h1 className={styles.title}>“{title}”</h1>
             <p className={styles.type}>{type}</p>
             <p className={styles.price}>{formatPrice(price)}</p>
-            <div className={styles.info} dangerouslySetInnerHTML={{ __html: html }} />
             <Button href={link} customStyles={styles.order}>
               Заказать
             </Button>
+            <p className={styles.description}>{description}</p>
+            <div className={styles.info} dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
       </div>

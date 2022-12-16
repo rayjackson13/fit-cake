@@ -24,7 +24,7 @@ export default ProductPageTemplate;
 export const Head: HeadFC = ({ pageContext, ...props }) => {
   const { product } = pageContext as { product: Product };
   const pageTitle = `${product.type} “${product.title}” | Fit Cake`;
-  const { publicURL } = product.image as { publicURL: '' };
+  const { publicURL } = (product.image || {}) as { publicURL: '' };
   const imageURL = `${process.env.GATSBY_PUBLIC_URL}${publicURL}`;
 
   return (

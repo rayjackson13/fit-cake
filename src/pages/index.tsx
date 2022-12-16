@@ -25,7 +25,18 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header isHomePage />
       <Hero {...{ scrollToCatalogue }} />
       <div ref={catalogueRef}>
-        <Catalogue category="popular" title="Популярные десерты" />
+        {/* <Catalogue
+          category="popular"
+          title="Популярные десерты"
+          subtitle="Ира лалка хахахахахахахахахаххаха лалка да ахах Ира лалка хахахахахахахахахаххаха лалка да ахах"
+        /> */}
+        <Catalogue category="sponge cake" title="Бисквитные торты от 1кг" />
+        <Catalogue
+          category="bento cake"
+          title="Бенто торты"
+          subtitle="Маленький тортик-открытка весом 450г на 2-3 человек, состоит из двух слоев бисквита, начинки и крема, надпись и несложный рисунок входят в стоимость"
+        />
+        <Catalogue category="sweet roll" title="Рулеты" />
         <Catalogue category="cashew cake" title="Кешью-кейки" />
       </div>
     </main>
