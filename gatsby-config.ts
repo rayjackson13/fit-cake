@@ -32,7 +32,7 @@ const config: GatsbyConfig = {
         fonts: [
           {
             family: 'Montserrat',
-            weights: ['400', '500'],
+            weights: ['400', '500', '700'],
           },
           {
             family: 'Tenor Sans',
