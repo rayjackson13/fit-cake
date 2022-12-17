@@ -4,7 +4,7 @@ type: Бенто торт
 description: Ванильный бисквит, творожный крем, кокосовая карамель и карамелизированный банан
 price: 1500
 keywords: [bento cake]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/1.jpg
 ---
 Надпись на торте -- бесплатно!
 Сложный рисунок + 200-300₽

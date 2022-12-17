@@ -4,7 +4,7 @@ type: Веганский торт
 description: Клубничный и черничный кешью-мусс на миндальном корже с кокосовой стружкой
 price: 3200
 keywords: [vegan cake]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/klubnika-chernika.jpg
 ---
 Состав: миндаль, кокосовая стружка, финики, кокосовое масло, клубника, черника, кешью, сироп топинамбура, экстракт ванили
 

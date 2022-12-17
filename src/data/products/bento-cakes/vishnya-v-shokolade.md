@@ -4,7 +4,7 @@ type: Бенто торт
 description: Шоколадный бисквит, шоколадный крем, вишневая начинка
 price: 1300
 keywords: [bento cake]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/4.jpg
 ---
 Надпись на торте -- бесплатно!
 Сложный рисунок + 200-300₽

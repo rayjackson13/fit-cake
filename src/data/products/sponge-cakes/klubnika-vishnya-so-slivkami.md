@@ -4,7 +4,7 @@ type: Бискитный торт
 description: Воздушный бисквит с маком, вишневая начинка, творожно-сливочный крем
 price: 2200
 keywords: [sponge cake]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/klubnika-vishnya-so-slivkami.jpg
 ---
 Состав: творожный сыр, мягкий творог, вишня замороженная, сливки 33%, яйца, рисовая мука, молоко, кокосовое масло, подсластитель, сироп топинамбура, кукурузный крахмал, мак, разрыхлитель.
 

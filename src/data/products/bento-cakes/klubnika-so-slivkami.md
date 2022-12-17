@@ -4,7 +4,7 @@ type: Бенто торт
 description: Ванильный бисквит, творожный крем, клубничная начинка
 price: 1300
 keywords: [bento cake]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/2.jpg
 ---
 Надпись на торте -- бесплатно!
 Сложный рисунок + 200-300₽

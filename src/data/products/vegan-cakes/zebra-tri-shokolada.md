@@ -4,7 +4,7 @@ type: Веганский торт
 description: Кешью-мусс из белого и молочного шоколада, хрустящий темный шоколад, корж из грецкого ореха и фиников
 price: 2800
 keywords: [vegan cake]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/zebra.jpg
 ---
 Состав: грецкий орех, какао-порошок, финики, кешью, какао-масло, сироп топинамбура, лимон, кокосовое масло
 

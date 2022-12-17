@@ -4,7 +4,7 @@ type: Рулет
 description: 
 price: 1600
 keywords: [sweet roll]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/merengovyy-rulet-s-klubnikoi.jpg
 ---
 Вес рулета -- 650г. Оформление кремом входит в стоимость
 

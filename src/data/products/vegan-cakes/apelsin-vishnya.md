@@ -4,7 +4,7 @@ type: Веганский торт
 description: Апельсиновый мусс, начинка из вишневого желе, пряный корж из кешью и фиников
 price: 2800
 keywords: [vegan cake]
-image: ../images/monika-grabkowska-xd5kuJAYPig-unsplash.jpg
+image: ./images/apelsin-vishnya.jpg
 ---
 Состав: кешью, корица, финики, вишня, сироп топинамбура, апельсиновый сок, куркума, агар-агар
 
